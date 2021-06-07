@@ -1,5 +1,5 @@
 # kubecosts_analyser
-analyse Kubecost API response between two teams
+analyse Kubecost (https://www.kubecost.com/) API response between two teams
 
 Report by team and users:
 - total amount of users
