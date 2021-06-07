@@ -12,7 +12,8 @@ analyse Kubecost (https://www.kubecost.com/) API response between two teams
 **Preparations**
 
 - save data to file for future analises by command: 
-`curl http://IP_OF_KUBECOST:PORT/model/allocation \\n  -d window=30d \\n  -d aggregate=label:owner \\n  -d shareIdle=false -G |jq > kubecost_data.json`
+
+    `curl http://IP_OF_KUBECOST:PORT/model/allocation \\n  -d window=30d \\n  -d aggregate=label:owner \\n  -d shareIdle=false -G |jq > kubecost_data.json`
 - change path in the script (open JSON file section)
 - change users teams lists
 
