@@ -1,3 +1,4 @@
+
 import csv
 import json
 import requests
@@ -5,7 +6,7 @@ import glob
 import os
 import dateutil.parser
 
-
+# users teams lists
 first_user_list = [ 
 "user1", 
 "user2", 
@@ -20,8 +21,6 @@ second_user_list = [
 "user9",
 "user10"]
 
-# befor run save data to file for future analises by comman 
-# curl http://IP_OF_KUBECOST:PORT/model/allocation \\n  -d window=30d \\n  -d aggregate=label:owner \\n  -d shareIdle=false -G |jq > kubecost_data.json
 # open JSON file
 f = open('/full/path/kubecost_data.json',)
 # returns JSON object as 
@@ -150,7 +149,6 @@ result = {}
 
 ploads = {'window':'30d','aggregate':'label:owner','shareIdle':'false'}
 response = requests.get('http://IP:PORT/model/allocation',params=ploads)
-
 
 json_data = response.json() if response and response.status_code == 200 else None
 
